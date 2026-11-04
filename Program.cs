@@ -14,7 +14,15 @@ if (!string.IsNullOrWhiteSpace(databaseUrl))
 {
     var uri = new Uri(databaseUrl);
     var userInfo = uri.UserInfo.Split(':', 2);
-    connectionString = $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={Uri.UnescapeDataString(userInfo[0])};Password={Uri.UnescapeDataString(userInfo[1])};SSL Mode=Disable";
+    
+    // Если порт не указан в URL (как во внутренних ссылках Render), ставим стандартный 5432
+    var dbPort = uri.Port == -1 ? 5432 : uri.Port; 
+    var dbName = uri.AbsolutePath.TrimStart('/');
+
+    connectionString = $"Host={uri.Host};Port={dbPort};Database={dbName};Username={Uri.UnescapeDataString(userInfo[0])};Password={Uri.UnescapeDataString(userInfo[1])};SSL Mode=Disable";
+    
+    // Выведем в логи (без пароля), чтобы видеть, что происходит
+    Console.WriteLine($"Connecting to DB at {uri.Host} on port {dbPort}");
 }
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
