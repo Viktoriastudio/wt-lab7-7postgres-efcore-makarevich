@@ -37,9 +37,9 @@ namespace wt_lab6_6minimalapi_makarevich.Migrations
                 columns: new[] { "Id", "Assignee", "CreatedAt", "EstimatedHours", "IsCompleted", "Project", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Ольга Смирнова", new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 16, true, "CRM для банка", "Сбор требований" },
-                    { 2, "Иван Петров", new DateTime(2026, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 24, true, "CRM для банка", "Проектирование БД" },
-                    { 3, "Иван Петров", new DateTime(2026, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), 40, false, "CRM для банка", "Разработка API" }
+                    { 1, "Ольга Смирнова", new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), 16, true, "CRM для банка", "Сбор требований" },
+                    { 2, "Иван Петров", new DateTime(2026, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc), 24, true, "CRM для банка", "Проектирование БД" },
+                    { 3, "Иван Петров", new DateTime(2026, 1, 3, 0, 0, 0, 0, DateTimeKind.Utc), 40, false, "CRM для банка", "Разработка API" }
                 });
         }
 

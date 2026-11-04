@@ -60,7 +60,7 @@ namespace wt_lab6_6minimalapi_makarevich.Migrations
                         {
                             Id = 1,
                             Assignee = "Ольга Смирнова",
-                            CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             EstimatedHours = 16,
                             IsCompleted = true,
                             Project = "CRM для банка",
@@ -70,7 +70,7 @@ namespace wt_lab6_6minimalapi_makarevich.Migrations
                         {
                             Id = 2,
                             Assignee = "Иван Петров",
-                            CreatedAt = new DateTime(2026, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2026, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc),
                             EstimatedHours = 24,
                             IsCompleted = true,
                             Project = "CRM для банка",
@@ -80,7 +80,7 @@ namespace wt_lab6_6minimalapi_makarevich.Migrations
                         {
                             Id = 3,
                             Assignee = "Иван Петров",
-                            CreatedAt = new DateTime(2026, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2026, 1, 3, 0, 0, 0, 0, DateTimeKind.Utc),
                             EstimatedHours = 40,
                             IsCompleted = false,
                             Project = "CRM для банка",
