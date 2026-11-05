@@ -1,0 +1,29 @@
+### 1. Получить все задачи (GET)
+GET https://wt-lab7-7postgres-efcore-makarevich.onrender.com/api/tasks
+
+### 2. Создать новую задачу (POST)
+POST https://wt-lab7-7postgres-efcore-makarevich.onrender.com/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Код-ревью",
+  "project": "CRM для банка",
+  "assignee": "Виктория Макаревич",
+  "estimatedHours": 5,
+  "isCompleted": false
+}
+
+### 3. Изменить задачу с ID 1 (PUT)
+PUT https://wt-lab7-7postgres-efcore-makarevich.onrender.com/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Сбор требований (ОБНОВЛЕНО)",
+  "project": "CRM для банка",
+  "assignee": "Ольга Смирнова",
+  "estimatedHours": 20,
+  "isCompleted": true
+}
+
+### 4. Удалить задачу с ID 2 (DELETE)
+DELETE https://wt-lab7-7postgres-efcore-makarevich.onrender.com/api/tasks/2

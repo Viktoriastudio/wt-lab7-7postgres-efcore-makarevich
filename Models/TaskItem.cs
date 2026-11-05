@@ -6,6 +6,7 @@ public class TaskItem
     public string Title { get; set; } = string.Empty;
     public string Project { get; set; } = string.Empty;
     public string Assignee { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
     public int EstimatedHours { get; set; }
     public bool IsCompleted { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow; // Новое свойство
